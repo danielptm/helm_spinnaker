@@ -1,0 +1,14 @@
+replicaCount: 3
+image:
+  name: nginx
+  tag: "1.27.0"
+
+#NGINX container ports
+containerPorts:
+  http: 80
+
+## sETTINGS FOR nginx service
+service:
+  type: ClusterIP
+  port: 80
+

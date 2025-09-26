@@ -1,0 +1,8 @@
+# Go comment
+# The below style comment will not propogate to template files, it is commented out
+# because the IDE is showing this as invalid, due to plugin issue
+# {{- /* Another comment that does not show up in generated template files */}}
+test: {{.Values.test}}
+labels:
+  app: {{.Release.Name}}
+  chart: {{.Chart.Name}}

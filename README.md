@@ -11,3 +11,4 @@ https://artifacthub.io/
 `helm lint <path/to/charts>`
 `helm install <release-name> <path/to/charts/`
 `helm uninstall <release-name>`
+`helm template <folder/with/templates>`
