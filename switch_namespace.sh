@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the list of options
-options=("default" "helm-spin", "Quit")
+options=("default" "helm-spinnaker" "Quit")
 
 # Function to display the options and let the user select
 select_option() {
