@@ -1,0 +1,9 @@
+dependencies:
+- name: mongodb
+  repository: oci://registry-1.docker.io/bitnamicharts
+  version: 16.5.45
+- name: jenkins
+  repository: https://charts.jenkins.io/
+  version: 5.8.92
+digest: sha256:cc3ccd1856fe5201f46e1bf6cb3c0c9821e362909a93e04835cc215e6c7ac126
+generated: "2025-09-26T14:30:09.01816767-07:00"
