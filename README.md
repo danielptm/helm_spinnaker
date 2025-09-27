@@ -22,3 +22,15 @@ user: admin
 default pw: LLLirvqoJ8unouQ9ZZzTAc
 
 See jenkins: http://localhost:8080/
+
+## Elastic setup
+Run
+`kubectl port-forward service/dpt-cloud-eck-kibana-kb-http 8000:5601 -n helm-spinnaker`
+
+Run to get the default password
+`kubectl get secret elasticsearch-es-elastic-user -o go-template='{{.data.elastic | base64decode}}'`
+When I ran it was:
+user: elastic
+pw: 11m0yXM3iN9y6owT3vNUX068
+
+See ELK: https://localhost:8000/app/home#/

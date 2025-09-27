@@ -5,5 +5,8 @@ dependencies:
 - name: jenkins
   repository: https://charts.jenkins.io/
   version: 5.8.92
-digest: sha256:cc3ccd1856fe5201f46e1bf6cb3c0c9821e362909a93e04835cc215e6c7ac126
-generated: "2025-09-26T14:30:09.01816767-07:00"
+- name: eck-stack
+  repository: https://helm.elastic.co
+  version: 0.16.0
+digest: sha256:98472e58bb56f187bdc52ce0c85a4914cc7bc077155bb0fc2e92b7c1319f0017
+generated: "2025-09-26T22:45:01.950369571-07:00"

@@ -9,9 +9,11 @@ dependencies:
   - name: mongodb
     version: 16.5.45
     repository: oci://registry-1.docker.io/bitnamicharts
+    # https://artifacthub.io/packages/helm/jenkinsci/jenkins
   - name: jenkins
     version: 5.8.92
     repository: https://charts.jenkins.io/
-#  - name: grafana-loki
-#    version: 6.0.6
-#    repository: https://charts.bitnami.com/bitnami
+    # https://artifacthub.io/packages/helm/elastic/eck-stack
+  - name: eck-stack
+    version: 0.16.0
+    repository: https://helm.elastic.co
