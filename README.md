@@ -21,11 +21,13 @@ Run
 user: admin
 default pw: LLLirvqoJ8unouQ9ZZzTAc
 
-See jenkins: http://localhost:8080/
 
 ## Elastic setup
 Run
 `kubectl port-forward service/dpt-cloud-eck-kibana-kb-http 8000:5601 -n helm-spinnaker`
+
+Get password
+`printf $(kubectl get secret --namespace helm-spinnaker dpt-cloud-jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo`
 
 Run to get the default password
 `kubectl get secret elasticsearch-es-elastic-user -o go-template='{{.data.elastic | base64decode}}'`
