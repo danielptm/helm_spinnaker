@@ -14,3 +14,11 @@ https://artifacthub.io/
 `helm template <folder/with/templates>`
 `helm dependency update <charts/folder>`
 `helm dependency build <charts/folder>`
+
+## Jenkins setup
+Run 
+`kubectl -n helm-spinnaker port-forward dpt-cloud-jenkins-0 8080:8080`
+user: admin
+default pw: LLLirvqoJ8unouQ9ZZzTAc
+
+See jenkins: http://localhost:8080/
