@@ -23,7 +23,7 @@ Get password
 Run 
 `kubectl -n helm-spinnaker port-forward dpt-cloud-jenkins-0 8080:8080`
 user: admin
-default pw: LLLirvqoJ8unouQ9ZZzTAc
+
 
 
 ## Elastic setup
@@ -32,6 +32,12 @@ Get password
 
 Run
 `kubectl port-forward service/dpt-cloud-eck-kibana-kb-http 8000:5601 -n helm-spinnaker`
+default user:elastic
+
+configured user:
+user: dpt
+pw: hello!234
+
 
 
 
