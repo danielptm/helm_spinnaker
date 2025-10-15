@@ -8,12 +8,13 @@
 https://artifacthub.io/
 
 ## Useful commands
-`helm lint <path/to/charts>`
-`helm install <release-name> <path/to/charts/`
-`helm uninstall <release-name>`
-`helm template <folder/with/templates>`
-`helm dependency update <charts/folder>`
-`helm dependency build <charts/folder>`
+- `helm lint <path/to/charts>`
+- `helm install <release-name> <path/to/charts/`
+- `helm uninstall <release-name>`
+- `helm template <folder/with/templates>`
+- `helm dependency update <charts/folder>`
+- `helm dependency build <charts/folder>`
+
 
 ## Jenkins setup
 
@@ -27,6 +28,10 @@ user: admin
 
 
 ## Elastic setup
+#### Install these first, otherwise chart will not install
+- Install crds `helm install my-eck-operator-crds elastic/eck-operator-crds --version 3.1.0`
+- Install elastic operation `helm install elastic-operator elastic/eck-operator -n elastic-system --create-namespace`
+
 Get password
 `kubectl get secret elasticsearch-es-elastic-user -o go-template='{{.data.elastic | base64decode}}'`
 
