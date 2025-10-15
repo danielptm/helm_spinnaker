@@ -41,9 +41,7 @@ default user:elastic
 
 configured user:
 user: dpt
-pw: hello!234
-
-
+pw: hello1234
 
 
 See ELK: https://localhost:8000/app/home#/
