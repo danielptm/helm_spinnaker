@@ -9,6 +9,20 @@ containerPorts:
 
 ## sETTINGS FOR nginx service
 service:
-  type: ClusterIP
+  type: NodePort
   port: 80
 
+jenkins:
+  controller:
+    serviceType: LoadBalancer
+
+# Does not work
+eck-kibana:
+  enabled: true
+  spec:
+    http:
+      service:
+        spec:
+          type: LoadBalancer
+          ports:
+            - port: 8000
