@@ -15,12 +15,3 @@ service:
 jenkins:
   controller:
     serviceType: LoadBalancer
-
-# Does not work
-eck-kibana:
-  ingress:
-    enabled: true
-    pathType: Prefix
-    hosts:
-      - host: chart-example.local
-        path: /
