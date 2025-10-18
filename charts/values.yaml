@@ -18,11 +18,9 @@ jenkins:
 
 # Does not work
 eck-kibana:
-  enabled: true
-  spec:
-    http:
-      service:
-        spec:
-          type: LoadBalancer
-          ports:
-            - port: 8000
+  ingress:
+    enabled: true
+    pathType: Prefix
+    hosts:
+      - host: chart-example.local
+        path: /
