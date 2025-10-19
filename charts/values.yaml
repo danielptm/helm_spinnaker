@@ -15,18 +15,3 @@ service:
 jenkins:
   controller:
     serviceType: LoadBalancer
-
-#eck-stack:
-#  eck-kibana:
-#    ingress:
-#      enabled: true
-#      className: nginx # Specify your ingress controller class if needed (e.g., nginx, traefik)
-#      annotations:
-#        # Add any specific annotations for your local ingress controller
-#        # For example, to disable TLS for local testing with Nginx Ingress:
-#        nginx.ingress.kubernetes.io/ssl-redirect: "false"
-#      hosts:
-#        - host: kibana.localdev # Use a local hostname for testing
-#          paths:
-#            - path: /
-#              pathType: Prefix
