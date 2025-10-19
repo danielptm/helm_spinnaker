@@ -1,1 +1,1 @@
-kubectl port-forward service/dpt-eck-kibana-kb-http 5601 -n helm-spinnaker
+kubectl -n helm-spinnaker port-forward service/dpt-eck-kibana-kb-http 5601

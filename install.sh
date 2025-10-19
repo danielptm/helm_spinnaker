@@ -1,17 +1,25 @@
 echo 'installing...'
 kubectl config set-context --current --namespace=helm-spinnaker
 
-helm install elastic-operator elastic/eck-operator -n elastic-system --create-namespace
-helm install elastic-operator-crds elastic/eck-operator-crds
+kubectl apply -f https://download.elastic.co/downloads/eck/3.1.0/crds.yaml
+kubectl apply -f https://download.elastic.co/downloads/eck/3.1.0/operator.yaml
 
+sleep 5
 
-helm  repo add elastic https://helm.elastic.co
+helm repo add elastic https://helm.elastic.co
 helm repo add jenkins https://charts.jenkins.io
 helm  repo add bitnami https://charts.bitnami.com/bitnami
 
-helm repo update
 
-helm dependency build charts
+helm repo update
+#
+#
+#helm install elastic-operator elastic/eck-operator -n elastic-system --create-namespace
+#helm install dpt-eck elastic/eck-stack -n elastic-stack --create-namespace
+
+
+helm dependency build charts/
+
 sleep 2
 helm install dpt charts
 echo '**'

@@ -3,7 +3,7 @@
 
 
 nohup kubectl -n helm-spinnaker port-forward dpt-jenkins-0 8080:8080 &
-nohup kubectl port-forward service/dpt-eck-kibana-kb-http 8000:5601 -n helm-spinnaker &
+nohup kubectl -n helm-spinnaker port-forward service/dpt-eck-kibana-kb-http 8000:5601  &
 
 echo 'Jenkins user: admin'
 echo 'Jenkins password'
